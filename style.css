@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #07111f;
+  color: #edf4ff;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 70px 8%;
+  background:
+    radial-gradient(circle at 80% 20%, #123f5c, transparent 35%),
+    linear-gradient(135deg, #07111f, #0a2030);
+}
+
+header h1 {
+  font-size: clamp(42px, 7vw, 76px);
+  margin: 15px 0;
+  line-height: .95;
+}
+
+header h1 span {
+  color: #42d6b5;
+}
+
+header p {
+  max-width: 600px;
+  color: #9eb3c8;
+  line-height: 1.6;
+}
+
+.badge {
+  color: #42d6b5;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+main {
+  width: min(1200px, 92%);
+  margin: -25px auto 80px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.stat,
+.panel {
+  background: #0c1928;
+  border: 1px solid #193149;
+  border-radius: 15px;
+}
+
+.stat {
+  padding: 25px;
+}
+
+.stat small {
+  color: #7189a1;
+}
+
+.stat strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 30px;
+  color: #42d6b5;
+}
+
+.panel {
+  margin-top: 20px;
+  padding: 30px;
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+.panel p {
+  color: #839ab0;
+}
+
+.upload {
+  display: block;
+  border: 2px dashed #244661;
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 25px;
+}
+
+.upload:hover {
+  border-color: #42d6b5;
+}
+
+.upload input {
+  display: none;
+}
+
+.upload strong,
+.upload span {
+  display: block;
+}
+
+.upload span {
+  margin-top: 8px;
+  color: #738aa0;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+button {
+  background: #42d6b5;
+  border: 0;
+  padding: 13px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin: 25px 0;
+}
+
+input,
+select {
+  background: #07111f;
+  border: 1px solid #24425d;
+  color: white;
+  padding: 13px;
+  border-radius: 7px;
+}
+
+#searchInput {
+  flex: 1;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  color: #7189a1;
+  font-size: 12px;
+  padding: 14px;
+}
+
+td {
+  padding: 15px;
+  border-top: 1px solid #172b3e;
+}
+
+.score {
+  font-weight: bold;
+}
+
+.hot {
+  color: #43e5a9;
+}
+
+.warm {
+  color: #ffd166;
+}
+
+.cool {
+  color: #8295a8;
+}
+
+footer {
+  padding: 40px;
+  text-align: center;
+  color: #536b81;
+  font-size: 12px;
+}
+
+@media(max-width: 750px) {
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .toolbar,
+  .filters {
+    flex-direction: column;
+  }
+}
