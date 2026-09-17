@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Covington Exterior Cleaning Lead Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div>
+    <span class="badge">AI LEAD INTELLIGENCE</span>
+    <h1>Covington Cleaning<br><span>Lead Finder</span></h1>
+    <p>
+      Find and prioritize exterior-cleaning opportunities
+      in Covington, Louisiana 70433.
+    </p>
+  </div>
+</header>
+
+<main>
+
+<section class="stats">
+
+  <div class="stat">
+    <small>PROPERTIES</small>
+    <strong id="totalCount">0</strong>
+  </div>
+
+  <div class="stat">
+    <small>HOT LEADS</small>
+    <strong id="hotCount">0</strong>
+  </div>
+
+  <div class="stat">
+    <small>AVG SCORE</small>
+    <strong id="avgScore">0</strong>
+  </div>
+
+  <div class="stat">
+    <small>MARKET</small>
+    <strong>70433</strong>
+  </div>
+
+</section>
+
+
+<section class="panel">
+
+  <h2>Import Property Data</h2>
+
+  <p>
+    Upload a CSV exported from an authorized/public property-data
+    source such as the St. Tammany Parish GIS.
+  </p>
+
+  <label class="upload">
+    <input type="file" id="csvFile" accept=".csv">
+    <strong>Choose CSV File</strong>
+    <span>CSV files only</span>
+  </label>
+
+</section>
+
+
+<section class="panel">
+
+  <div class="toolbar">
+
+    <div>
+      <h2>Prospect Intelligence</h2>
+      <p>Automatically prioritize exterior-cleaning opportunities.</p>
+    </div>
+
+    <button id="exportBtn">
+      Export Leads
+    </button>
+
+  </div>
+
+
+  <div class="filters">
+
+    <input
+      id="searchInput"
+      placeholder="Search owner or address..."
+    >
+
+    <select id="scoreFilter">
+      <option value="0">All Scores</option>
+      <option value="80">Hot Leads 80+</option>
+      <option value="70">70+</option>
+      <option value="60">60+</option>
+    </select>
+
+  </div>
+
+
+  <div class="table-wrapper">
+
+    <table>
+
+      <thead>
+        <tr>
+          <th>Score</th>
+          <th>Owner</th>
+          <th>Property</th>
+          <th>Suggested Service</th>
+          <th>Opportunity</th>
+        </tr>
+      </thead>
+
+      <tbody id="leadTable"></tbody>
+
+    </table>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  Property records should be independently verified before use.
+  AI scores indicate potential opportunities, not confirmed cleaning needs.
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
